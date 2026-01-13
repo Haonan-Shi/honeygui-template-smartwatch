@@ -4,6 +4,11 @@
     </meta>
     <view>
         <hg_view id="app_music_view" x="0" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" entry="true" zIndex="1">
+            <events>
+                <event type="onKeyShortClick">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
             <hg_list id="hg_list_1768278317813_ni8t" x="29" y="117" width="352" height="385" itemWidth="352" itemHeight="115" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="3" offset="0" outScope="80" autoAlign="true" inertia="true" loop="false" createBar="false" zIndex="1">
                 <hg_list_item id="hg_list_1768278317813_ni8t_item_1" x="0" y="0" width="352" height="115" index="0" locked="true" zIndex="1">
                     <hg_rect id="hg_rect_1768278391413_rzwv" x="0" y="0" width="352" height="115" borderRadius="30" fillColor="#626562" opacity="200" useGradient="false" gradientDirection="horizontal" zIndex="1" />

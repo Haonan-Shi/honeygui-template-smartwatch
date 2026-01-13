@@ -51,7 +51,13 @@
                 </hg_list_item>
                 <hg_list_item id="hg_list_1768181662781_4e4z_item_3" x="0" y="334" width="352" height="157" index="2" locked="true" zIndex="1">
                     <hg_image id="hg_image_1768182235506_6vul" x="0" y="0" width="352" height="157" src="assets/tab_bg/bottom_tab_bg.png" zIndex="1" />
-                    <hg_image id="hg_image_1768183941920_4wxc" x="21" y="29" width="100" height="100" transform="{&quot;scaleX&quot;:0.85,&quot;scaleY&quot;:0.85}" src="assets/UI_app_list/app_music_icon.png" zIndex="1" />
+                    <hg_image id="hg_image_1768183941920_4wxc" x="21" y="29" width="100" height="100" transform="{&quot;scaleX&quot;:0.85,&quot;scaleY&quot;:0.85}" src="assets/UI_app_list/app_music_icon.png" zIndex="1">
+                        <events>
+                            <event type="onClick">
+                                <action type="switchView" target="app_music_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                            </event>
+                        </events>
+                    </hg_image>
                     <hg_image id="hg_image_1768184009679_rg6a" x="244" y="29" width="100" height="100" transform="{&quot;scaleX&quot;:0.85,&quot;scaleY&quot;:0.85}" src="assets/UI_app_list/app_message_icon.png" zIndex="1" />
                     <hg_circle id="hg_circle_1768184067471_7e0p" x="134" y="29" width="80" height="80" radius="40" fillColor="#000000" useGradient="false" gradientType="radial" opacity="255" zIndex="1" />
                     <hg_arc id="hg_arc_1768184160265_b289" x="132" y="27" width="84" height="84" radius="34" startAngle="0" endAngle="360" strokeWidth="8" color="#5b7d59" useGradient="false" opacity="255" zIndex="1" />
