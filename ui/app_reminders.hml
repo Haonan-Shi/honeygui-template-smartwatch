@@ -49,12 +49,12 @@
                 </hg_list_item>
             </hg_list>
             <hg_window id="hg_window_1768375945225_5zqu" x="0" y="0" width="410" height="100" enableBlur="true" blurDegree="225" zIndex="1">
-                <hg_label id="hg_label_1768375968482_dbco" x="306" y="20" width="75" height="36" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="15:0123456789" fontSize="36" fontFile="/font/sf_compact_text_medium.otf" timeFormat="HH:mm" zIndex="1" />
+                <hg_label id="hg_label_1768375968482_dbco" x="306" y="20" width="75" height="36" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="15:01" fontSize="36" fontFile="/font/sf_compact_text_medium.otf" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789&quot;}]" zIndex="1" />
                 <hg_label id="hg_label_1768376091766_um28" x="306" y="64" width="80" height="36" hAlign="RIGHT" vAlign="TOP" color="#4294F4" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Lists" fontFile="/font/sf_compact_text_medium.otf" fontSize="36" zIndex="1" />
             </hg_window>
         </hg_view>
         <hg_view id="app_reminder_today_view" x="1049" y="221" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" entry="false" zIndex="1">
-            <hg_label id="hg_label_1768375968482_dbco_copy_1768380253154" x="306" y="20" width="80" height="36" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="15:33" fontSize="36" fontFile="/font/sf_compact_text_medium.otf" timeFormat="HH:mm" zIndex="1" />
+            <hg_label id="hg_label_1768375968482_dbco_copy_1768380253154" x="306" y="20" width="80" height="36" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="15:33" fontSize="36" fontFile="/font/sf_compact_text_medium.otf" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789&quot;}]" zIndex="1" />
             <hg_label id="hg_label_1768376091766_um28_copy_1768380290090" x="306" y="64" width="84" height="36" hAlign="RIGHT" vAlign="TOP" color="#4294F4" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Today" fontFile="/font/sf_compact_text_medium.otf" fontSize="36" zIndex="1" />
             <hg_rect id="hg_rect_1768381023374_vc4v" x="58" y="345" width="300" height="100" borderRadius="50" fillColor="#3775ca" opacity="255" useGradient="false" gradientDirection="horizontal" zIndex="1" />
             <hg_circle id="hg_circle_1768383603782_kadm" x="35" y="12" width="72" height="72" radius="36" fillColor="#ffffff" opacity="128" useGradient="false" gradientType="radial" zIndex="1">
