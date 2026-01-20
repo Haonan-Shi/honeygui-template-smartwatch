@@ -35,7 +35,6 @@
                     <hg_arc id="hg_arc_1768546769438_z3jr_copy_1768546889407" x="312" y="406" width="84" height="84" radius="34" startAngle="150" endAngle="30" strokeWidth="8" color="#ffffff" opacity="178" useGradient="false" zIndex="1" />
                     <hg_circle id="hg_circle_1768552575692_0uqc" x="16" y="416" width="10" height="10" radius="5" fillColor="#ffffff" opacity="255" useGradient="false" gradientType="radial" zIndex="1" />
                     <hg_circle id="hg_circle_1768552575692_0uqc_copy_1768552660885" x="328" y="416" width="10" height="10" radius="5" fillColor="#ffffff" opacity="255" useGradient="false" gradientType="radial" zIndex="1" />
-                    <hg_time_label id="hg_time_label_1768897552107_vzdk" x="155" y="34" width="120" height="35" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/sf_compact_text_semibold.otf" fontSize="35" zIndex="1" />
                 </hg_list_item>
                 <hg_list_item id="hg_list_1768294664982_waoc_item_2" x="0" y="502" width="410" height="502" index="1" locked="true" zIndex="1">
                     <hg_image id="hg_image_1768294824307_eosg" x="0" y="0" width="410" height="502" src="assets/weather/weather_background2.png" zIndex="1" />
@@ -115,6 +114,7 @@
             <hg_window id="hg_window_1768295553663_yuvn" x="0" y="0" width="410" height="100" enableBlur="false" blurDegree="225" zIndex="1">
                 <hg_image id="hg_image_1768295597921_odwf" x="13" y="14" width="75" height="75" src="assets/weather/weather_left_control.png" zIndex="1" />
                 <hg_image id="hg_image_1768295616519_80cd" x="322" y="14" width="75" height="75" src="assets/weather/weather_right_control.png" zIndex="1" />
+                <hg_time_label id="hg_time_label_1768897552107_vzdk" x="155" y="34" width="120" height="35" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/sf_compact_text_semibold.otf" fontSize="35" zIndex="1" />
             </hg_window>
         </hg_view>
     </view>
