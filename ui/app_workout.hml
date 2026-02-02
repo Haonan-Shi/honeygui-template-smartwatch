@@ -6,6 +6,11 @@
     </meta>
     <view>
         <hg_view id="app_workout_view" x="0" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" entry="false" zIndex="0">
+            <events>
+                <event type="onClick">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
             <hg_rect id="app_workout_bg" x="0" y="0" width="410" height="502" borderRadius="0" fillColor="#202411" opacity="255" useGradient="false" gradientDirection="horizontal" zIndex="0" />
             <hg_list id="app_workout_menu_list" x="0" y="127" width="410" height="502" itemWidth="410" itemHeight="300" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="18" offset="0" outScope="80" autoAlign="false" inertia="true" loop="false" createBar="false" showOverflow="true" zIndex="1" showOverflow="true">
                 <hg_list_item id="app_workout_menu_list_item_1" x="0" y="0" width="410" height="300" index="0" locked="true" zIndex="0">
