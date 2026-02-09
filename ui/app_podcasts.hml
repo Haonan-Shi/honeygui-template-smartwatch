@@ -9,7 +9,7 @@
                     <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                 </event>
             </events>
-            <hg_list id="app_podcast_menu_list" x="29" y="115" width="352" height="385" itemWidth="352" itemHeight="115" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="3" offset="0" outScope="80" autoAlign="true" inertia="true" loop="false" createBar="false" zIndex="0">
+            <hg_list id="app_podcast_menu_list" x="29" y="115" width="352" height="385" itemWidth="352" itemHeight="115" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="3" offset="0" outScope="80" autoAlign="false" inertia="true" loop="false" createBar="false" zIndex="0">
                 <hg_list_item id="app_podcast_menu_list_item_1" x="0" y="0" width="352" height="115" index="0" locked="true" zIndex="0">
                     <hg_rect id="podcats_menu_tag0" x="0" y="0" width="352" height="115" borderRadius="30" fillColor="#626562" opacity="200" useGradient="false" gradientDirection="horizontal" zIndex="0">
                         <events>

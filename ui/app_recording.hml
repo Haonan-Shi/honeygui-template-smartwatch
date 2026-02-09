@@ -18,6 +18,13 @@
                     </event>
                 </events>
             </hg_button>
+            <hg_list id="hg_list_1770625643235_vyd3" x="0" y="73" width="410" height="502" itemWidth="410" itemHeight="100" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="5" offset="0" outScope="0" autoAlign="false" inertia="true" loop="false" createBar="false" showOverflow="true" zIndex="1" showOverflow="true">
+                <hg_list_item id="hg_list_1770625643235_vyd3_item_1" x="0" y="0" width="410" height="100" index="0" locked="true" zIndex="0" />
+                <hg_list_item id="hg_list_1770625643235_vyd3_item_2" x="0" y="105" width="410" height="100" index="1" locked="true" zIndex="1" />
+                <hg_list_item id="hg_list_1770625643235_vyd3_item_3" x="0" y="210" width="410" height="100" index="2" locked="true" zIndex="2" />
+                <hg_list_item id="hg_list_1770625643235_vyd3_item_4" x="0" y="315" width="410" height="100" index="3" locked="true" zIndex="3" />
+                <hg_list_item id="hg_list_1770625643235_vyd3_item_5" x="0" y="420" width="410" height="100" index="4" locked="true" zIndex="4" />
+            </hg_list>
         </hg_view>
     </view>
 </hml>

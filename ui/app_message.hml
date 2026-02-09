@@ -11,7 +11,7 @@
                     <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                 </event>
             </events>
-            <hg_list id="hg_list_1768285628248_uckn" x="10" y="110" width="390" height="502" itemWidth="390" itemHeight="218" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="3" offset="0" outScope="80" autoAlign="true" inertia="true" loop="false" createBar="false" zIndex="0">
+            <hg_list id="hg_list_1768285628248_uckn" x="10" y="110" width="390" height="502" itemWidth="390" itemHeight="218" space="5" direction="VERTICAL" style="LIST_CLASSIC" cardStackLocation="0" noteNum="3" offset="0" outScope="80" autoAlign="false" inertia="true" loop="false" createBar="false" zIndex="0">
                 <hg_list_item id="hg_list_1768285628248_uckn_item_1" x="0" y="0" width="390" height="218" index="0" locked="true" zIndex="0">
                     <hg_rect id="hg_rect_1768355895884_eznz" x="0" y="0" width="390" height="218" borderRadius="20" fillColor="#2C2C2E" opacity="230" useGradient="false" gradientDirection="horizontal" zIndex="0" />
                     <hg_image id="hg_image_1768356352082_xvk6" x="20" y="10" width="72" height="72" src="assets/app_message/message_head_icon.png" zIndex="1" />

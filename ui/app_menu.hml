@@ -11,7 +11,7 @@
                     <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                 </event>
             </events>
-            <hg_list id="app_menu_list" x="27" y="0" width="350" height="502" itemWidth="350" itemHeight="100" space="5" direction="VERTICAL" style="LIST_CIRCLE" noteNum="28" offset="0" outScope="50" autoAlign="true" inertia="true" loop="false" createBar="false" showOverflow="true" zIndex="0" showOverflow="true">
+            <hg_list id="app_menu_list" x="27" y="0" width="350" height="502" itemWidth="350" itemHeight="100" space="5" direction="VERTICAL" style="LIST_CIRCLE" noteNum="28" offset="0" outScope="50" autoAlign="false" inertia="true" loop="false" createBar="false" showOverflow="true" zIndex="0" showOverflow="true">
                 <hg_list_item id="app_menu_list_item_1" x="0" y="0" width="350" height="100" index="0" locked="true" zIndex="0">
                     <events>
                         <event type="onClick">
