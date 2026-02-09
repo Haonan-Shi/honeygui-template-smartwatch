@@ -239,8 +239,13 @@
                     <hg_label id="hg_label_sleep" x="140" y="29" width="177" height="42" hAlign="LEFT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Sleep" fontSize="42" fontFile="/font/Inter_24pt_Regular.ttf" zIndex="1" />
                 </hg_list_item>
                 <hg_list_item id="app_menu_list_item_26" x="0" y="2625" width="350" height="100" index="25" locked="true" zIndex="25">
-                    <hg_image id="hg_image_1766997411103_1umq" x="0" y="0" width="100" height="100" src="assets/UI_app_list/app_stocks_icon.png" zIndex="0" />
-                    <hg_label id="hg_label_stocks" x="140" y="37" width="177" height="42" hAlign="LEFT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Stocks" fontSize="42" fontFile="/font/Inter_24pt_Regular.ttf" zIndex="1" />
+                    <events>
+                        <event type="onClick">
+                            <action type="switchView" target="app_recording_view" switchOutStyle="SWITCH_OUT_TO_LEFT_USE_TRANSLATION" switchInStyle="SWITCH_IN_FROM_RIGHT_USE_TRANSLATION" />
+                        </event>
+                    </events>
+                    <hg_label id="hg_label_stocks" x="140" y="37" width="177" height="42" hAlign="LEFT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Recording" fontSize="42" fontFile="/font/Inter_24pt_Regular.ttf" zIndex="1" />
+                    <hg_image id="hg_image_1770619023128_i8od" x="0" y="0" width="100" height="100" src="assets/UI_app_list/recording_icon.png" zIndex="1" />
                 </hg_list_item>
                 <hg_list_item id="app_menu_list_item_27" x="0" y="2730" width="350" height="100" index="26" locked="true" zIndex="26">
                     <hg_image id="hg_image_1766997417220_cv1w" x="0" y="0" width="100" height="100" src="assets/UI_app_list/app_world_clock_icon.png" zIndex="0" />
