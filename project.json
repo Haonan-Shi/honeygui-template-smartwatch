@@ -1,4 +1,6 @@
 {
+  "$schema": "HoneyGUI",
+  "type": "Designer",
   "name": "SmartWatchTemplate",
   "appId": "com.honeygui.smartwatch",
   "version": "1.0.0",
