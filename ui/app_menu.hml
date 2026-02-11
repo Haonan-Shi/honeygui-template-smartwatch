@@ -7,7 +7,7 @@
     <view>
         <hg_view id="app_menu_view" x="13" y="11" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" zIndex="0">
             <events>
-                <event type="onKeyShortClick">
+                <event type="onKeyShortPress" keyName="Home">
                     <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                 </event>
             </events>
@@ -18,10 +18,10 @@
                             <action type="switchView" target="app_activity_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                         </event>
                     </events>
-                    <hg_image id="hg_image_1766649235950_h90c" x="0" y="-6" width="100" height="106" src="assets/UI_app_list/app_activity_icon.png" zIndex="0">
+                    <hg_image id="app_menu_activity_icon" x="0" y="-6" width="100" height="106" src="assets/UI_app_list/app_activity_icon.png" zIndex="0">
                         <events>
-                            <event type="onClick">
-                                <action type="switchView" target="app_activity_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                            <event type="onKeyShortPress" keyName="Home">
+                                <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                             </event>
                         </events>
                     </hg_image>

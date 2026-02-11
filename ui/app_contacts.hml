@@ -39,6 +39,11 @@
                 </hg_list_item>
             </hg_list>
             <hg_window id="app_contact_window" x="0" y="0" width="410" height="110" backgroundColor="#808080" showBackground="false" enableBlur="true" blurDegree="225" zIndex="1">
+                <events>
+                    <event type="onKeyShortPress" keyName="Home">
+                        <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
                 <hg_time_label id="hg_time_label_1770691753179_vzi3" x="300" y="20" width="80" height="32" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="32" zIndex="1" />
                 <hg_label id="hg_label_1770692164587_14y6" x="280" y="63" width="100" height="24" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Contacts" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="24" zIndex="1" />
             </hg_window>
@@ -46,11 +51,19 @@
         <hg_view id="app_contacts_c_view" x="565" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" entry="false" zIndex="1">
             <hg_image id="hg_image_1770691020367_567a" x="0" y="0" width="410" height="502" src="assets/app_contacts/Taylor_Swift.jpg" zIndex="0" />
             <hg_window id="app_contacts_c_window" x="0" y="0" width="410" height="110" backgroundColor="#808080" showBackground="false" enableBlur="false" blurDegree="225" zIndex="1">
+                <events>
+                    <event type="onKeyShortPress" keyName="Home">
+                        <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
                 <hg_time_label id="app_contacts_c_time_text" x="300" y="20" width="80" height="32" hAlign="RIGHT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="32" zIndex="0" />
                 <hg_circle id="app_contacts_c_back_icon_bg" x="20" y="10" width="80" height="80" radius="40" fillColor="#2C2C2E" opacity="168" useGradient="false" gradientType="radial" zIndex="1">
                     <events>
                         <event type="onClick">
                             <action type="switchView" target="app_contacts_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                        </event>
+                        <event type="onKeyShortPress" keyName="Home">
+                            <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                         </event>
                     </events>
                 </hg_circle>

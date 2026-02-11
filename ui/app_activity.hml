@@ -6,15 +6,15 @@
     </meta>
     <view>
         <hg_view id="app_activity_view" x="54" y="91" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" entry="true" zIndex="0">
-            <events>
-                <event type="onKeyShortClick">
-                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
-                </event>
-            </events>
             <hg_image id="hg_image_1768547548984_alny" x="17" y="12" width="72" height="72" src="assets/activity/activity_Left_Control0.png" zIndex="0" />
             <hg_image id="hg_image_1768547556733_4p1o" x="17" y="414" width="72" height="72" src="assets/activity/activity_Left_Control.png" zIndex="1" />
             <hg_image id="hg_image_1768547565671_dhz0" x="328" y="414" width="72" height="72" src="assets/activity/activity_Right_Control0.png" zIndex="2" />
             <hg_window id="hg_window_arc" x="0" y="84" width="410" height="335" enableBlur="false" blurDegree="225" zIndex="3">
+                <events>
+                    <event type="onKeyShortPress" keyName="Home">
+                        <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
                 <hg_arc id="hg_arc_1768547683171_qrb4" x="40" y="0" width="350" height="350" radius="150" startAngle="0" endAngle="360" strokeWidth="25" color="#2C020D" opacity="255" useGradient="false" arcGroup="bg_rings" zIndex="0" />
                 <hg_arc id="hg_arc_1768547680478_fdgw" x="40" y="0" width="350" height="350" radius="150" startAngle="270" endAngle="200" strokeWidth="25" color="#FA114F" opacity="255" useGradient="true" gradientStops="[{&quot;position&quot;:0,&quot;color&quot;:&quot;#FA114F&quot;},{&quot;position&quot;:1,&quot;color&quot;:&quot;#FF0000&quot;}]" zIndex="1" />
                 <hg_arc id="hg_arc_1768548096125_le9v" x="70" y="30" width="290" height="290" radius="120" startAngle="0" endAngle="360" strokeWidth="25" color="#1A2B00" opacity="255" useGradient="false" arcGroup="bg_rings" zIndex="2" />

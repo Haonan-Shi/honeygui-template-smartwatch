@@ -6,16 +6,13 @@
     </meta>
     <view>
         <hg_view id="app_weatherMainView" x="0" y="0" width="410" height="502" backgroundColor="#000000" entry="true" zIndex="0">
-            <events>
-                <event type="onKeyShortClick">
-                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
-                </event>
-            </events>
             <hg_list id="hg_list_1768294664982_waoc" x="0" y="0" width="410" height="502" itemWidth="410" itemHeight="502" space="0" direction="VERTICAL" style="LIST_FADE" cardStackLocation="0" noteNum="3" offset="0" outScope="0" autoAlign="false" inertia="false" loop="false" createBar="false" showOverflow="true" zIndex="0" showOverflow="true">
                 <hg_list_item id="hg_list_1768294664982_waoc_item_1" x="0" y="0" width="410" height="502" index="0" locked="true" zIndex="0">
                     <hg_image id="hg_image_1768294809757_5m7u" x="0" y="0" width="410" height="502" src="assets/weather/weather_background1.png" zIndex="0">
                         <events>
-                            <event type="onClick" />
+                            <event type="onKeyShortPress" keyName="Home">
+                                <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                            </event>
                         </events>
                     </hg_image>
                     <hg_label id="hg_label_1768378493276_3u9s" x="130" y="145" width="150" height="45" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Sonoma" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="43" fontType="bitmap" renderMode="2" zIndex="1" />
@@ -59,6 +56,11 @@
                 <hg_list_item id="hg_list_1768294664982_waoc_item_3" x="0" y="1004" width="410" height="502" index="2" locked="true" zIndex="2">
                     <hg_image id="hg_image_1768294838136_pvx2" x="0" y="0" width="410" height="502" src="assets/weather/weather_background3.png" zIndex="0" />
                     <hg_window id="hg_window_1768382155606_the0" x="0" y="160" width="410" height="502" enableBlur="false" blurDegree="225" zIndex="1">
+                        <events>
+                            <event type="onKeyShortPress" keyName="Home">
+                                <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                            </event>
+                        </events>
                         <hg_window id="hg_window_1768382226080_1lpg" x="0" y="0" width="410" height="76" enableBlur="false" blurDegree="225" zIndex="0">
                             <hg_label id="hg_label_1768378493276_3u9s_copy_1768381236407_copy_1768382064836_copy_1768382473302" x="25" y="0" width="150" height="45" hAlign="LEFT" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Today" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="31" fontType="bitmap" renderMode="2" zIndex="0" />
                             <hg_image id="hg_image_1768382559457_f2ue" x="185" y="0" width="33" height="33" src="assets/weather/weather_condition_sunny.png" zIndex="1" />

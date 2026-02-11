@@ -13,15 +13,19 @@
                 <event type="onSwipeUp">
                     <action type="switchView" target="app_bottom_view" switchOutStyle="SWITCH_INIT_STATE" switchInStyle="SWITCH_IN_FROM_BOTTOM_USE_TRANSLATION" />
                 </event>
-                <event type="onKeyShortClick">
-                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
-                </event>
                 <event type="onLongPress">
                     <action type="switchView" target="watchface_select_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                 </event>
             </events>
-            <hg_rect id="hg_rect_1766998925528_70wq" x="0" y="0" width="410" height="502" borderRadius="0" fillColor="#de7994" opacity="255" visible="false" zIndex="0" />
-            <hg_time_label id="hg_time_label_1768896234329_v8yi" x="35" y="20" width="340" height="462" hAlign="LEFT" vAlign="TOP" color="#FEF974" letterSpacing="2" lineSpacing="0" wordWrap="true" timeFormat="HH:mm-split" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="242" zIndex="1" />
+            <hg_window id="samrtWatch_window" x="0" y="0" width="410" height="110" backgroundColor="#808080" showBackground="false" enableBlur="false" blurDegree="225" zIndex="0">
+                <events>
+                    <event type="onKeyShortPress" keyName="Menu">
+                        <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
+            </hg_window>
+            <hg_rect id="hg_rect_1766998925528_70wq" x="0" y="0" width="410" height="502" borderRadius="0" fillColor="#de7994" opacity="255" visible="false" zIndex="1" />
+            <hg_time_label id="hg_time_label_1768896234329_v8yi" x="35" y="20" width="340" height="462" hAlign="LEFT" vAlign="TOP" color="#FEF974" letterSpacing="2" lineSpacing="0" wordWrap="true" timeFormat="HH:mm-split" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="242" zIndex="2" />
         </hg_view>
         <hg_view id="app_bottom_view" x="-3776" y="-255" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="12" overflow="auto" zIndex="1">
             <events>

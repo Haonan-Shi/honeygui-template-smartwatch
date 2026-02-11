@@ -13,8 +13,12 @@
                     <event type="onClick">
                         <action type="controlTimer" timerTargets="[{&quot;componentId&quot;:&quot;music_scan_icon_bg&quot;,&quot;timerIndex&quot;:0,&quot;action&quot;:&quot;start&quot;}]" />
                     </event>
+                    <event type="onKeyShortPress" keyName="Home">
+                        <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
                 </events>
             </hg_image>
+            <hg_label id="hg_label_1770793098712_0862" x="132" y="375" width="147" height="32" hAlign="LEFT" vAlign="TOP" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Tap to Scan" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="32" zIndex="1" />
         </hg_view>
     </view>
 </hml>
