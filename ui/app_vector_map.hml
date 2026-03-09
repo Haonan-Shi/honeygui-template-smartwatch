@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hml>
+    <meta>
+        <project name="app_vector_map" appId="com.honeygui.smartwatch" resolution="410X502" minSdk="API 2: HoneyGUI V1.1.0" pixelMode="RGB565" />
+        <author name="Anonymous" />
+    </meta>
+    <view>
+        <hg_view id="app_vector_mapMainView" x="0" y="0" width="410" height="502" backgroundColor="#000000" entry="true" zIndex="0">
+            <hg_map id="hg_map_1773027333563_p7tt" x="0" y="0" width="410" height="502" mapFile="/app_vector_map/sip.trmap" fontFile="/app_vector_map/NotoSansSC-Medium_subset.ttf" zIndex="1" />
+        </hg_view>
+    </view>
+</hml>
