@@ -14,6 +14,9 @@
                     <event type="onKeyShortPress" keyName="Home">
                         <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                     </event>
+                    <event type="onKeyShortPress" keyName="Menu">
+                        <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_INIT_STATE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
                 </events>
                 <hg_arc id="hg_arc_1768547683171_qrb4" x="40" y="0" width="350" height="350" radius="150" startAngle="0" endAngle="360" strokeWidth="25" color="#2C020D" opacity="255" useGradient="false" arcGroup="bg_rings" zIndex="0" />
                 <hg_arc id="hg_arc_1768547680478_fdgw" x="40" y="0" width="350" height="350" radius="150" startAngle="270" endAngle="200" strokeWidth="25" color="#FA114F" opacity="255" useGradient="true" gradientStops="[{&quot;position&quot;:0,&quot;color&quot;:&quot;#FA114F&quot;},{&quot;position&quot;:1,&quot;color&quot;:&quot;#FF0000&quot;}]" zIndex="1" />

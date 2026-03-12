@@ -34,6 +34,9 @@
                     <event type="onKeyShortPress" keyName="Home">
                         <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
                     </event>
+                    <event type="onKeyShortPress" keyName="Menu">
+                        <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_INIT_STATE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
                 </events>
                 <hg_image id="hg_image_1768355370798_508r" x="27" y="9" width="72" height="72" src="assets/app_message/message_write_icon.png" zIndex="0" />
                 <hg_label id="app_message_title" x="249" y="60" width="144" height="50" hAlign="RIGHT" vAlign="TOP" color="#4294F4" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Messages" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="36" zIndex="1" />

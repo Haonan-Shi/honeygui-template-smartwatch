@@ -6,15 +6,9 @@
     </meta>
     <view>
         <hg_view id="app_weatherMainView" x="0" y="0" width="410" height="502" backgroundColor="#000000" entry="true" zIndex="0">
-            <hg_list id="hg_list_weather" x="0" y="0" width="410" height="502" itemWidth="410" itemHeight="502" space="0" direction="VERTICAL" style="LIST_FADE" cardStackLocation="0" noteNum="3" offset="0" outScope="0" autoAlign="false" inertia="false" loop="false" createBar="false" showOverflow="true" enableAreaDisplay="false" zIndex="0" showOverflow="true">
+            <hg_list id="hg_list_weather" x="0" y="0" width="410" height="502" itemWidth="410" itemHeight="502" space="0" direction="VERTICAL" style="LIST_FADE" cardStackLocation="0" noteNum="3" offset="0" outScope="0" autoAlign="true" inertia="false" loop="false" createBar="false" showOverflow="true" enableAreaDisplay="false" zIndex="0" showOverflow="true">
                 <hg_list_item id="hg_list_weather_item_1" x="0" y="0" width="410" height="502" index="0" locked="true" zIndex="0">
-                    <hg_image id="hg_image_weather_bg1" x="0" y="0" width="410" height="502" src="assets/weather/weather_background1.png" zIndex="0">
-                        <events>
-                            <event type="onKeyShortPress" keyName="Home">
-                                <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
-                            </event>
-                        </events>
-                    </hg_image>
+                    <hg_image id="hg_image_weather_bg1" x="0" y="0" width="410" height="502" src="assets/weather/weather_background1.png" zIndex="0" />
                     <hg_label id="hg_label_city" x="130" y="145" width="150" height="45" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Sonoma" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="43" fontType="bitmap" renderMode="2" zIndex="1" />
                     <hg_label id="hg_label_temperature1" x="130" y="187" width="150" height="105" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="76" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="103" fontType="bitmap" renderMode="2" zIndex="2" />
                     <hg_label id="hg_label_temperature_degree1" x="189" y="179" width="150" height="105" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="°" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="83" fontType="bitmap" renderMode="2" zIndex="3" />
@@ -56,11 +50,6 @@
                 <hg_list_item id="hg_list_weather_item_3" x="0" y="1004" width="410" height="502" index="2" locked="true" zIndex="2">
                     <hg_image id="hg_image_weather_bg3" x="0" y="0" width="410" height="502" src="assets/weather/weather_background3.png" zIndex="0" />
                     <hg_window id="hg_window_weather_forecast" x="0" y="160" width="410" height="502" enableBlur="false" blurDegree="225" zIndex="1">
-                        <events>
-                            <event type="onKeyShortPress" keyName="Home">
-                                <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
-                            </event>
-                        </events>
                         <hg_window id="hg_window_weather1" x="0" y="0" width="410" height="76" enableBlur="false" blurDegree="225" zIndex="0">
                             <hg_label id="hg_label_weather_today" x="25" y="0" width="150" height="45" hAlign="LEFT" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Today" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="31" fontType="bitmap" renderMode="2" zIndex="0" />
                             <hg_image id="hg_image_weather_sun1" x="185" y="0" width="33" height="33" src="assets/weather/weather_condition_sunny.png" zIndex="1" />
@@ -114,6 +103,14 @@
                 </hg_list_item>
             </hg_list>
             <hg_window id="hg_window_weather_top" x="0" y="0" width="410" height="100" enableBlur="false" blurDegree="225" zIndex="1">
+                <events>
+                    <event type="onKeyShortPress" keyName="Menu">
+                        <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_INIT_STATE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                    <event type="onKeyShortPress" keyName="Home">
+                        <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_INIT_STATE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
                 <hg_image id="hg_image_weather_function" x="13" y="14" width="75" height="75" src="assets/weather/weather_left_control.png" zIndex="0" />
                 <hg_image id="hg_image_weather_right" x="322" y="14" width="75" height="75" src="assets/weather/weather_right_control.png" zIndex="1" />
                 <hg_time_label id="hg_time_label_weather" x="155" y="34" width="120" height="35" hAlign="CENTER" vAlign="MID" color="#ffffff" letterSpacing="0" lineSpacing="0" wordWrap="false" timeFormat="HH:mm" characterSets="[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;0123456789:- &quot;}]" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="35" zIndex="2" />

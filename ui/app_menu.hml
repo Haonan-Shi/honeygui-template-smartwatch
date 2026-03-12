@@ -18,7 +18,7 @@
                     </event>
                 </events>
             </hg_window>
-            <hg_list id="app_menu_list" x="27" y="0" width="350" height="502" itemWidth="350" itemHeight="100" space="5" direction="VERTICAL" style="LIST_CIRCLE" noteNum="28" offset="0" outScope="50" autoAlign="false" inertia="true" loop="false" createBar="false" showOverflow="true" enableAreaDisplay="false" zIndex="1" showOverflow="true">
+            <hg_list id="app_menu_list" x="27" y="0" width="350" height="502" itemWidth="350" itemHeight="100" space="5" direction="VERTICAL" style="LIST_CIRCLE" circleRadius="820" noteNum="28" offset="0" outScope="0" autoAlign="true" inertia="true" loop="true" createBar="false" showOverflow="true" enableAreaDisplay="false" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;动画 1&quot;,&quot;enabled&quot;:false,&quot;interval&quot;:10,&quot;reload&quot;:true,&quot;mode&quot;:&quot;custom&quot;,&quot;callback&quot;:&quot;app_menu_list_timer_0_cb&quot;,&quot;duration&quot;:1000,&quot;stopOnComplete&quot;:true,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[],&quot;enableLog&quot;:true}]" zIndex="1" showOverflow="true">
                 <hg_list_item id="app_menu_list_item_1" x="0" y="0" width="350" height="100" index="0" locked="true" zIndex="0">
                     <events>
                         <event type="onClick">
