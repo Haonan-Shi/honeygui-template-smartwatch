@@ -91,6 +91,10 @@
     },
     "app_recording": {
       "compression": "rle"
+    },
+    "app_camera": {
+      "compression": "rle",
+      "format": "adaptive16"
     }
   }
 }

@@ -5,16 +5,16 @@
 #include <string.h>
 #include <time.h>
 
-// 定时动画计数器
+// Timer animation counters
 uint16_t app_menu_list_timer_cnt = 0;
 
-// 事件回调函数实现
+// Event callback function implementations
 
 void app_menu_view_key_0_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // 检查按键名
+    // Check key name
     if (strcmp(e->indev_name, "Home") == 0)
     {
         gui_view_switch_direct(gui_view_get_current(), "SmartWatchTemplateMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
@@ -25,7 +25,7 @@ void app_menu_window_key_0_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // 检查按键名
+    // Check key name
     if (strcmp(e->indev_name, "Home") == 0)
     {
         gui_view_switch_direct(gui_view_get_current(), "SmartWatchTemplateMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
@@ -120,7 +120,7 @@ void hg_image_noise_clicked_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // TODO: 实现事件处理逻辑
+    // TODO: Implement event handling logic
 }
 
 void app_menu_list_item_8_switch_view_cb(void *obj, gui_event_t *e)
@@ -270,24 +270,40 @@ void app_menu_list_item_26_switch_view_cb(void *obj, gui_event_t *e)
     gui_view_switch_direct(gui_view_get_current(), "app_recording_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
-/* @protected start custom_functions */
-// 自定义函数
-static int16_t list_offset_rec = 0;
+void app_menu_list_item_27_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_cameraMainView", SWITCH_OUT_TO_LEFT_USE_TRANSLATION, SWITCH_IN_FROM_RIGHT_USE_TRANSLATION);
+}
+
+// Preset timer callback functions
+
+/**
+ * 动画 1
+ * Component: app_menu_list
+ */
 void app_menu_list_timer_0_cb(void *obj)
 {
     GUI_UNUSED(obj);
-    gui_list_t *list = obj;
-    app_menu_list_timer_cnt++;
-    gui_view_t *view_next = gui_view_get_next();
-    if (view_next && strcmp("SmartWatchTemplateMainView", gui_view_get_current()->base.name))
-    {
-        gui_list_set_offset(list, list_offset_rec);
+    // Call the implementation function in protected area (if exists)
+    // Define app_menu_list_timer_0_cb_impl() in custom_functions protected area for custom logic
+#ifdef __cplusplus
+    extern "C" {
+#endif
+    extern void app_menu_list_timer_0_cb_impl(void) __attribute__((weak));
+#ifdef __cplusplus
     }
-    else
-    {
-        list_offset_rec = list->offset;
-    }
+#endif
     
-    // gui_log("inertia:%d, speed:%d\n", app_menu_list->inertia, app_menu_list->speed);
+    if (app_menu_list_timer_0_cb_impl) {
+        app_menu_list_timer_0_cb_impl();
+    } else {
+        // TODO: Implement timer callback logic
+        // Or define app_menu_list_timer_0_cb_impl() in custom_functions protected area
+    }
 }
+
+/* @protected start custom_functions */
+// 自定义函数
 /* @protected end custom_functions */
