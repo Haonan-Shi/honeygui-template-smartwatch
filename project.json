@@ -15,5 +15,15 @@
   "assetsDir": "assets",
   "uiDir": "ui",
   "srcDir": "src",
-  "romfsBaseAddr": "0x704D1000"
+  "romfsBaseAddr": "0x704D1000",
+  "alwaysConvert": {
+    "images": [
+      "app_walkie_talkie/green_circle.png",
+      "app_walkie_talkie/red_circle.png",
+      "app_walkie_talkie/yellow_circle.png"
+    ],
+    "videos": [],
+    "models": [],
+    "fonts": []
+  }
 }

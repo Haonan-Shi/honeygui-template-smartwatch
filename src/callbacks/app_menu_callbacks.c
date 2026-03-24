@@ -274,7 +274,21 @@ void app_menu_list_item_27_switch_view_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    gui_view_switch_direct(gui_view_get_current(), "app_cameraMainView", SWITCH_OUT_TO_LEFT_USE_TRANSLATION, SWITCH_IN_FROM_RIGHT_USE_TRANSLATION);
+    gui_view_switch_direct(gui_view_get_current(), "app_cameraMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_28_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_walkie_talkieMainView", SWITCH_OUT_TO_LEFT_USE_TRANSLATION, SWITCH_IN_FROM_RIGHT_USE_TRANSLATION);
+}
+
+void hg_image_1773813146142_x7xd_clicked_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_menu_cellular_view", SWITCH_OUT_NONE_ANIMATION, SWITCH_IN_ANIMATION_FADE);
 }
 
 // Preset timer callback functions
