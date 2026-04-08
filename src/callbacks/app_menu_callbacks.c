@@ -99,14 +99,14 @@ void app_menu_list_item_6_switch_view_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    gui_view_switch_direct(gui_view_get_current(), "app_phone_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+    gui_view_switch_direct(gui_view_get_current(), "app_phoneDialerView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
 void hg_image_1766997251460_wgoz_clicked_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    gui_view_switch_direct(gui_view_get_current(), "app_phone_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+    gui_view_switch_direct(gui_view_get_current(), "app_phoneDialerView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
 void app_menu_list_item_7_switch_view_cb(void *obj, gui_event_t *e)
@@ -263,13 +263,6 @@ void app_menu_list_item_25_switch_view_cb(void *obj, gui_event_t *e)
     gui_view_switch_direct(gui_view_get_current(), "app_sleep_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
-void app_menu_list_item_26_switch_view_cb(void *obj, gui_event_t *e)
-{
-    GUI_UNUSED(obj);
-    GUI_UNUSED(e);
-    gui_view_switch_direct(gui_view_get_current(), "app_recording_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
-}
-
 void app_menu_list_item_27_switch_view_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
@@ -282,6 +275,48 @@ void app_menu_list_item_28_switch_view_cb(void *obj, gui_event_t *e)
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
     gui_view_switch_direct(gui_view_get_current(), "app_walkie_talkieMainView", SWITCH_OUT_TO_LEFT_USE_TRANSLATION, SWITCH_IN_FROM_RIGHT_USE_TRANSLATION);
+}
+
+void app_menu_list_item_29_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_control_centerMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_intercom_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_intercomMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_music_player_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_music_playerPlayerView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_ota_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_otaReadyView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_26_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_recordingMainView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
+void app_menu_list_item_video_call_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_video_callIdleView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
 void hg_image_1773813146142_x7xd_clicked_cb(void *obj, gui_event_t *e)

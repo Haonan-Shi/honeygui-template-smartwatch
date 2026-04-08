@@ -1,0 +1,20 @@
+#ifndef APP_VIDEO_CALL_USER_H
+#define APP_VIDEO_CALL_USER_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "gui_api.h"
+
+void mic_toggle(void *obj, gui_event_t *e);
+void speaker_toggle(void *obj, gui_event_t *e);
+void hangup_reset(void *obj, gui_event_t *e);
+void video_call_calling_view_init_cb_impl(void);
+void ring_pulse_timer_cb_impl(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // APP_VIDEO_CALL_USER_H

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hml>
+    <meta>
+        <project name="SmartWatchTemplate" description="HoneyGUI Project" version="1.0.0" resolution="410X502" minSdk="API 2: HoneyGUI V1.1.0" pixelMode="ARGB8888" />
+        <author name="HoneyGUI Design" />
+    </meta>
+    <view>
+        <hg_view id="app_otaReadyView" x="0" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="0" overflow="auto" entry="true" zIndex="0">
+            <events>
+                <event type="onKeyShortPress" keyName="Home">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+                <event type="onKeyShortPress" keyName="Menu">
+                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
+            <hg_image id="ota_ready_back_btn" x="32" y="28" width="32" height="32" src="assets/app_ota/back_icon.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
+            </hg_image>
+            <hg_label id="ota_ready_version" x="130" y="76" width="150" height="20" hAlign="CENTER" vAlign="MID" color="rgba(255,255,255,0.4)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Firmware v2.4.1" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="14" zIndex="1" />
+            <hg_image id="ota_ready_glow" x="75" y="120" width="260" height="260" src="assets/app_ota/glow_pulse/frame_00.png" zIndex="0" />
+            <hg_arc id="ota_ready_ring_bg" x="95" y="140" width="220" height="220" radius="105" startAngle="0" endAngle="360" strokeWidth="10" color="#FFFFFF" opacity="8" zIndex="1" />
+            <hg_label id="ota_ready_percent" x="150" y="220" width="100" height="60" hAlign="CENTER" vAlign="MID" color="#FFFFFF" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="0" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="54" zIndex="3" />
+            <hg_label id="ota_ready_pct_sym" x="230" y="230" width="30" height="40" hAlign="LEFT" vAlign="MID" color="rgba(255,255,255,0.6)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="%" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="26" zIndex="3" />
+            <hg_label id="ota_ready_status" x="95" y="385" width="220" height="24" hAlign="CENTER" vAlign="MID" color="#00e5a0" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Waiting for Phone" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="18" zIndex="1" />
+            <hg_image id="ota_ready_dots" x="175" y="413" width="50" height="20" src="assets/app_ota/pulsing_dots/frame_00.png" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;dots_anim&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:33,&quot;reload&quot;:true,&quot;mode&quot;:&quot;preset&quot;,&quot;callback&quot;:&quot;ota_ready_dots_timer_0_cb&quot;,&quot;duration&quot;:1000,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[{&quot;duration&quot;:1000,&quot;actions&quot;:[{&quot;type&quot;:&quot;imageSequence&quot;,&quot;from&quot;:255,&quot;to&quot;:128,&quot;imageSequence&quot;:[&quot;assets/app_ota/pulsing_dots/frame_00.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_01.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_02.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_03.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_04.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_05.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_06.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_07.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_08.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_09.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_10.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_11.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_12.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_13.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_14.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_15.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_16.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_17.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_18.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_19.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_20.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_21.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_22.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_23.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_24.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_25.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_26.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_27.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_28.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_29.png&quot;],&quot;imagePath&quot;:&quot;&quot;}]}],&quot;enableLog&quot;:false}]" zIndex="1" />
+            <hg_image id="ota_connect_btn" x="100" y="430" width="220" height="52" src="assets/app_ota/install_btn.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="switchView" target="app_otaStartingView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                    </event>
+                </events>
+            </hg_image>
+        </hg_view>
+        <hg_view id="app_otaStartingView" x="410" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="0" overflow="auto" zIndex="0">
+            <events>
+                <event type="onKeyShortPress" keyName="Home">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+                <event type="onKeyShortPress" keyName="Menu">
+                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
+            <hg_image id="ota_starting_back_btn" x="32" y="28" width="32" height="32" src="assets/app_ota/back_icon.png" zIndex="1" />
+            <hg_label id="ota_starting_version" x="130" y="76" width="150" height="20" hAlign="CENTER" vAlign="MID" color="rgba(255,255,255,0.4)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Firmware v2.4.1" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="14" zIndex="1" />
+            <hg_image id="ota_starting_glow" x="75" y="120" width="260" height="260" src="assets/app_ota/glow_pulse/frame_00.png" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;glow_anim&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:33,&quot;reload&quot;:true,&quot;mode&quot;:&quot;preset&quot;,&quot;callback&quot;:&quot;ota_starting_glow_timer_0_cb&quot;,&quot;duration&quot;:2500,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[{&quot;duration&quot;:1500,&quot;actions&quot;:[{&quot;type&quot;:&quot;imageSequence&quot;,&quot;from&quot;:255,&quot;to&quot;:128,&quot;imageSequence&quot;:[&quot;assets/app_ota/glow_pulse/frame_00.png&quot;,&quot;assets/app_ota/glow_pulse/frame_01.png&quot;,&quot;assets/app_ota/glow_pulse/frame_02.png&quot;,&quot;assets/app_ota/glow_pulse/frame_03.png&quot;,&quot;assets/app_ota/glow_pulse/frame_04.png&quot;,&quot;assets/app_ota/glow_pulse/frame_05.png&quot;,&quot;assets/app_ota/glow_pulse/frame_06.png&quot;,&quot;assets/app_ota/glow_pulse/frame_07.png&quot;,&quot;assets/app_ota/glow_pulse/frame_08.png&quot;,&quot;assets/app_ota/glow_pulse/frame_09.png&quot;,&quot;assets/app_ota/glow_pulse/frame_10.png&quot;,&quot;assets/app_ota/glow_pulse/frame_11.png&quot;,&quot;assets/app_ota/glow_pulse/frame_12.png&quot;,&quot;assets/app_ota/glow_pulse/frame_13.png&quot;,&quot;assets/app_ota/glow_pulse/frame_14.png&quot;,&quot;assets/app_ota/glow_pulse/frame_15.png&quot;,&quot;assets/app_ota/glow_pulse/frame_16.png&quot;,&quot;assets/app_ota/glow_pulse/frame_17.png&quot;,&quot;assets/app_ota/glow_pulse/frame_18.png&quot;,&quot;assets/app_ota/glow_pulse/frame_19.png&quot;,&quot;assets/app_ota/glow_pulse/frame_20.png&quot;,&quot;assets/app_ota/glow_pulse/frame_21.png&quot;,&quot;assets/app_ota/glow_pulse/frame_22.png&quot;,&quot;assets/app_ota/glow_pulse/frame_23.png&quot;,&quot;assets/app_ota/glow_pulse/frame_24.png&quot;,&quot;assets/app_ota/glow_pulse/frame_25.png&quot;,&quot;assets/app_ota/glow_pulse/frame_26.png&quot;,&quot;assets/app_ota/glow_pulse/frame_27.png&quot;,&quot;assets/app_ota/glow_pulse/frame_28.png&quot;,&quot;assets/app_ota/glow_pulse/frame_29.png&quot;],&quot;imagePath&quot;:&quot;&quot;}]}],&quot;enableLog&quot;:false}]" zIndex="0" />
+            <hg_arc id="ota_starting_ring_bg" x="95" y="140" width="220" height="220" radius="105" startAngle="0" endAngle="360" strokeWidth="10" color="#FFFFFF" opacity="8" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;starting_delay&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:2000,&quot;reload&quot;:false,&quot;mode&quot;:&quot;custom&quot;,&quot;callback&quot;:&quot;ota_starting_timer_cb&quot;,&quot;duration&quot;:0,&quot;stopOnComplete&quot;:true,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[]}]" zIndex="1" />
+            <hg_label id="ota_starting_percent" x="150" y="220" width="100" height="60" hAlign="CENTER" vAlign="MID" color="#FFFFFF" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="0" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="54" zIndex="3" />
+            <hg_label id="ota_starting_pct_sym" x="230" y="230" width="30" height="40" hAlign="LEFT" vAlign="MID" color="rgba(255,255,255,0.6)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="%" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="26" zIndex="3" />
+            <hg_label id="ota_starting_status" x="95" y="385" width="220" height="24" hAlign="CENTER" vAlign="MID" color="#00e5a0" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Preparing..." fontFile="/font/Inter_24pt_Regular.ttf" fontSize="18" zIndex="1" />
+            <hg_image id="ota_starting_dots" x="175" y="413" width="50" height="20" src="assets/app_ota/pulsing_dots/frame_00.png" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;dots_anim&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:33,&quot;reload&quot;:true,&quot;mode&quot;:&quot;preset&quot;,&quot;callback&quot;:&quot;ota_starting_dots_timer_0_cb&quot;,&quot;duration&quot;:1000,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[{&quot;duration&quot;:1000,&quot;actions&quot;:[{&quot;type&quot;:&quot;imageSequence&quot;,&quot;from&quot;:255,&quot;to&quot;:128,&quot;imageSequence&quot;:[&quot;assets/app_ota/pulsing_dots/frame_00.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_01.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_02.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_03.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_04.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_05.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_06.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_07.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_08.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_09.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_10.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_11.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_12.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_13.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_14.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_15.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_16.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_17.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_18.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_19.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_20.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_21.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_22.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_23.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_24.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_25.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_26.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_27.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_28.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_29.png&quot;],&quot;imagePath&quot;:&quot;&quot;}]}],&quot;enableLog&quot;:false}]" zIndex="1" />
+        </hg_view>
+        <hg_view id="app_otaUpdatingView" x="820" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="0" overflow="auto" zIndex="0">
+            <events>
+                <event type="onKeyShortPress" keyName="Home">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+                <event type="onKeyShortPress" keyName="Menu">
+                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
+            <hg_image id="ota_updating_back_btn" x="32" y="28" width="32" height="32" src="assets/app_ota/back_icon.png" zIndex="1" />
+            <hg_label id="ota_updating_version" x="130" y="76" width="150" height="20" hAlign="CENTER" vAlign="MID" color="rgba(255,255,255,0.4)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Firmware v2.4.1" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="14" zIndex="1" />
+            <hg_image id="ota_updating_glow" x="75" y="120" width="260" height="260" src="assets/app_ota/glow_pulse/frame_00.png" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;glow_anim&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:33,&quot;reload&quot;:true,&quot;mode&quot;:&quot;preset&quot;,&quot;callback&quot;:&quot;ota_updating_glow_timer_0_cb&quot;,&quot;duration&quot;:2500,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[{&quot;duration&quot;:1500,&quot;actions&quot;:[{&quot;type&quot;:&quot;imageSequence&quot;,&quot;from&quot;:255,&quot;to&quot;:128,&quot;imageSequence&quot;:[&quot;assets/app_ota/glow_pulse/frame_00.png&quot;,&quot;assets/app_ota/glow_pulse/frame_01.png&quot;,&quot;assets/app_ota/glow_pulse/frame_02.png&quot;,&quot;assets/app_ota/glow_pulse/frame_03.png&quot;,&quot;assets/app_ota/glow_pulse/frame_04.png&quot;,&quot;assets/app_ota/glow_pulse/frame_05.png&quot;,&quot;assets/app_ota/glow_pulse/frame_06.png&quot;,&quot;assets/app_ota/glow_pulse/frame_07.png&quot;,&quot;assets/app_ota/glow_pulse/frame_08.png&quot;,&quot;assets/app_ota/glow_pulse/frame_09.png&quot;,&quot;assets/app_ota/glow_pulse/frame_10.png&quot;,&quot;assets/app_ota/glow_pulse/frame_11.png&quot;,&quot;assets/app_ota/glow_pulse/frame_12.png&quot;,&quot;assets/app_ota/glow_pulse/frame_13.png&quot;,&quot;assets/app_ota/glow_pulse/frame_14.png&quot;,&quot;assets/app_ota/glow_pulse/frame_15.png&quot;,&quot;assets/app_ota/glow_pulse/frame_16.png&quot;,&quot;assets/app_ota/glow_pulse/frame_17.png&quot;,&quot;assets/app_ota/glow_pulse/frame_18.png&quot;,&quot;assets/app_ota/glow_pulse/frame_19.png&quot;,&quot;assets/app_ota/glow_pulse/frame_20.png&quot;,&quot;assets/app_ota/glow_pulse/frame_21.png&quot;,&quot;assets/app_ota/glow_pulse/frame_22.png&quot;,&quot;assets/app_ota/glow_pulse/frame_23.png&quot;,&quot;assets/app_ota/glow_pulse/frame_24.png&quot;,&quot;assets/app_ota/glow_pulse/frame_25.png&quot;,&quot;assets/app_ota/glow_pulse/frame_26.png&quot;,&quot;assets/app_ota/glow_pulse/frame_27.png&quot;,&quot;assets/app_ota/glow_pulse/frame_28.png&quot;,&quot;assets/app_ota/glow_pulse/frame_29.png&quot;],&quot;imagePath&quot;:&quot;&quot;}]}],&quot;enableLog&quot;:false}]" zIndex="0" />
+            <hg_arc id="ota_updating_ring_bg" x="95" y="140" width="220" height="220" radius="105" startAngle="0" endAngle="360" strokeWidth="10" color="#FFFFFF" opacity="8" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;progress_tick&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:50,&quot;reload&quot;:true,&quot;mode&quot;:&quot;custom&quot;,&quot;callback&quot;:&quot;ota_progress_tick_cb&quot;,&quot;duration&quot;:0,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[]}]" zIndex="1" />
+            <hg_arc id="ota_updating_ring" x="95" y="140" width="220" height="220" radius="105" startAngle="-90" endAngle="-90" strokeWidth="10" color="#00E5A0" opacity="255" useGradient="true" gradientStops="[{&quot;position&quot;:0,&quot;color&quot;:&quot;#00E5A0&quot;},{&quot;position&quot;:0.5,&quot;color&quot;:&quot;#4e54b1&quot;},{&quot;position&quot;:1,&quot;color&quot;:&quot;#00E5A0&quot;}]" zIndex="2" />
+            <hg_label id="ota_updating_percent" x="150" y="220" width="100" height="60" hAlign="CENTER" vAlign="MID" color="#FFFFFF" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="0" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="54" zIndex="3" />
+            <hg_label id="ota_updating_pct_sym" x="230" y="230" width="30" height="40" hAlign="LEFT" vAlign="MID" color="rgba(255,255,255,0.6)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="%" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="26" zIndex="3" />
+            <hg_label id="ota_updating_status" x="95" y="385" width="220" height="24" hAlign="CENTER" vAlign="MID" color="#00e5a0" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Updating..." fontFile="/font/Inter_24pt_Regular.ttf" fontSize="18" zIndex="1" />
+            <hg_image id="ota_updating_dots" x="175" y="413" width="50" height="20" src="assets/app_ota/pulsing_dots/frame_00.png" timers="[{&quot;id&quot;:&quot;timer_0&quot;,&quot;name&quot;:&quot;dots_anim&quot;,&quot;enabled&quot;:true,&quot;interval&quot;:33,&quot;reload&quot;:true,&quot;mode&quot;:&quot;preset&quot;,&quot;callback&quot;:&quot;ota_updating_dots_timer_0_cb&quot;,&quot;duration&quot;:1000,&quot;stopOnComplete&quot;:false,&quot;delayStart&quot;:0,&quot;actions&quot;:[],&quot;segments&quot;:[{&quot;duration&quot;:1000,&quot;actions&quot;:[{&quot;type&quot;:&quot;imageSequence&quot;,&quot;from&quot;:255,&quot;to&quot;:128,&quot;imageSequence&quot;:[&quot;assets/app_ota/pulsing_dots/frame_00.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_01.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_02.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_03.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_04.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_05.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_06.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_07.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_08.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_09.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_10.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_11.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_12.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_13.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_14.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_15.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_16.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_17.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_18.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_19.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_20.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_21.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_22.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_23.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_24.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_25.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_26.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_27.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_28.png&quot;,&quot;assets/app_ota/pulsing_dots/frame_29.png&quot;],&quot;imagePath&quot;:&quot;&quot;}]}],&quot;enableLog&quot;:false}]" zIndex="1" />
+        </hg_view>
+        <hg_view id="app_otaSuccessView" x="1230" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="0" overflow="auto" zIndex="0">
+            <events>
+                <event type="onKeyShortPress" keyName="Home">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+                <event type="onKeyShortPress" keyName="Menu">
+                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
+            <hg_image id="ota_success_back_btn" x="32" y="28" width="32" height="32" src="assets/app_ota/back_icon.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="callFunction" functionName="ota_reset_to_ready" />
+                    </event>
+                </events>
+            </hg_image>
+            <hg_label id="ota_success_version" x="130" y="76" width="150" height="20" hAlign="CENTER" vAlign="MID" color="rgba(255,255,255,0.4)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Firmware v2.4.1" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="14" zIndex="1" />
+            <hg_arc id="ota_success_ring_bg" x="95" y="140" width="220" height="220" radius="105" startAngle="0" endAngle="360" strokeWidth="10" color="#FFFFFF" opacity="8" zIndex="1" />
+            <hg_arc id="ota_success_ring" x="95" y="140" width="220" height="220" radius="105" startAngle="-90" endAngle="-90" strokeWidth="10" color="#00E5A0" opacity="255" useGradient="true" gradientStops="[{&quot;position&quot;:0,&quot;color&quot;:&quot;#00e5a0&quot;},{&quot;position&quot;:0.5,&quot;color&quot;:&quot;#4e54b1&quot;},{&quot;position&quot;:1,&quot;color&quot;:&quot;#00e5a0&quot;}]" gradientStartAngle="-90" gradientEndAngle="-88" zIndex="2" />
+            <hg_label id="ota_success_percent" x="150" y="220" width="100" height="60" hAlign="CENTER" vAlign="MID" color="#FFFFFF" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="100" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="54" characterSets="[{&quot;type&quot;:&quot;range&quot;,&quot;value&quot;:&quot;0x20-0x7E&quot;}]" zIndex="3" />
+            <hg_label id="ota_success_pct_sym" x="245" y="230" width="30" height="40" hAlign="LEFT" vAlign="MID" color="rgba(255,255,255,0.6)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="%" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="26" zIndex="3" />
+            <hg_image id="ota_success_check" x="103" y="382" width="36" height="36" src="assets/app_ota/check_icon.png" zIndex="1" />
+            <hg_label id="ota_success_status" x="147" y="385" width="180" height="24" hAlign="LEFT" vAlign="MID" color="#00e5a0" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Update Complete" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="18" zIndex="1" />
+            <hg_image id="ota_done_btn" x="100" y="430" width="220" height="52" src="assets/app_ota/done_btn.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="callFunction" functionName="ota_reset_to_ready" />
+                    </event>
+                </events>
+            </hg_image>
+        </hg_view>
+        <hg_view id="app_otaFailedView" x="1640" y="0" width="410" height="502" backgroundColor="#000000" borderRadius="0" padding="0" overflow="auto" zIndex="0">
+            <events>
+                <event type="onKeyShortPress" keyName="Home">
+                    <action type="switchView" target="SmartWatchTemplateMainView" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+                <event type="onKeyShortPress" keyName="Menu">
+                    <action type="switchView" target="app_menu_view" switchOutStyle="SWITCH_OUT_ANIMATION_FADE" switchInStyle="SWITCH_IN_ANIMATION_FADE" />
+                </event>
+            </events>
+            <hg_image id="ota_failed_back_btn" x="32" y="28" width="32" height="32" src="assets/app_ota/back_icon.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="callFunction" functionName="ota_reset_to_ready" />
+                    </event>
+                </events>
+            </hg_image>
+            <hg_label id="ota_failed_version" x="130" y="76" width="150" height="20" hAlign="CENTER" vAlign="MID" color="rgba(255,255,255,0.4)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Firmware v2.4.1" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="14" zIndex="1" />
+            <hg_arc id="ota_failed_ring_bg" x="95" y="140" width="220" height="220" radius="105" startAngle="0" endAngle="360" strokeWidth="10" color="#FFFFFF" opacity="8" zIndex="1" />
+            <hg_arc id="ota_failed_ring" x="95" y="140" width="220" height="220" radius="105" startAngle="-90" endAngle="270" strokeWidth="10" color="#ff4d6a" opacity="255" zIndex="2" />
+            <hg_label id="ota_failed_percent" x="150" y="220" width="100" height="60" hAlign="CENTER" vAlign="MID" color="#FFFFFF" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="100" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="54" zIndex="3" />
+            <hg_label id="ota_failed_pct_sym" x="245" y="230" width="30" height="40" hAlign="LEFT" vAlign="MID" color="rgba(255,255,255,0.6)" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="%" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="26" zIndex="3" />
+            <hg_label id="ota_failed_status" x="95" y="385" width="220" height="24" hAlign="CENTER" vAlign="MID" color="#ff4d6a" letterSpacing="0" lineSpacing="0" wordWrap="false" wordBreak="false" text="Update Failed" fontFile="/font/Inter_24pt_Regular.ttf" fontSize="18" zIndex="1" />
+            <hg_image id="ota_retry_btn" x="100" y="430" width="220" height="52" src="assets/app_ota/retry_btn.png" zIndex="1">
+                <events>
+                    <event type="onClick">
+                        <action type="callFunction" functionName="ota_retry" />
+                    </event>
+                </events>
+            </hg_image>
+        </hg_view>
+    </view>
+</hml>

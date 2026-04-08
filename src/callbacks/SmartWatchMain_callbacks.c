@@ -5,24 +5,24 @@
 #include <string.h>
 #include <time.h>
 
-// 时间字符串全局变量（在 UI 文件中定义）
+// Time string global variables (defined in UI file)
 extern char hg_time_label_hh_time_str[4];
 extern char hg_time_label_mm_time_str[4];
 extern char hg_time_label_1772765275313_pgx4_time_str[10];
 extern char hg_time_label_1772765275313_pgx4_copy_1772765661189_2_time_str[10];
 
-// 定时动画计数器
+// Timer animation counters
 uint16_t win_clock_big_timer_cnt = 0;
 uint16_t text_date_big_timer_cnt = 0;
 uint16_t text_date_small_timer_cnt = 0;
 
-// 事件回调函数实现
+// Event callback function implementations
 
 void SmartWatchTemplateMainView_key_0_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // 检查按键名
+    // Check key name
     if (strcmp(e->indev_name, "Menu") == 0)
     {
         gui_view_switch_direct(gui_view_get_current(), "app_menu_view", SWITCH_INIT_STATE, SWITCH_IN_ANIMATION_FADE);
@@ -33,7 +33,7 @@ void samrtWatch_window_key_0_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // 检查按键名
+    // Check key name
     if (strcmp(e->indev_name, "Menu") == 0)
     {
         gui_view_switch_direct(gui_view_get_current(), "app_menu_view", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);

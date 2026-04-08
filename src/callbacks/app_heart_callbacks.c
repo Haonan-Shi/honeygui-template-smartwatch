@@ -5,20 +5,20 @@
 #include <string.h>
 #include <time.h>
 
-// 时间字符串全局变量（在 UI 文件中定义）
+// Time string global variables (defined in UI file)
 extern char hg_time_label_heart_time_str[10];
 
-// 定时动画计数器
+// Timer animation counters
 uint16_t hg_image_1769146380658_kvde_timer_cnt = 0;
 uint16_t app_heart_circel0_timer_cnt = 0;
 
-// 事件回调函数实现
+// Event callback function implementations
 
 void app_heart_window_key_0_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
     GUI_UNUSED(e);
-    // 检查按键名
+    // Check key name
     if (strcmp(e->indev_name, "Home") == 0)
     {
         gui_view_switch_direct(gui_view_get_current(), "SmartWatchTemplateMainView", SWITCH_OUT_NONE_ANIMATION, SWITCH_IN_ANIMATION_FADE);
@@ -45,13 +45,13 @@ void hg_time_label_heart_time_update_cb(void *p)
     gui_text_content_set((gui_text_t *)hg_time_label_heart, hg_time_label_heart_time_str, strlen(hg_time_label_heart_time_str));
 }
 
-// 预设定时器回调函数
+// Preset timer callback functions
 
 /**
  * 定时动画 1
- * 组件: hg_image_1769146380658_kvde
- * 模式: 预设动作（多段动画）
- * 段数: 1
+ * Component: hg_image_1769146380658_kvde
+ * Mode: Preset actions (multi-segment animation)
+ * Segments: 1
  */
 void hg_image_1769146380658_kvde_timer_0_cb(void *obj)
 {
@@ -63,12 +63,12 @@ void hg_image_1769146380658_kvde_timer_0_cb(void *obj)
     
     hg_image_1769146380658_kvde_timer_cnt++;
     
-    // 段 1: 1000ms, 1 个动作
+    // Segment 1: 1000ms, 1 action(s)
     if (hg_image_1769146380658_kvde_timer_cnt > seg0_start && hg_image_1769146380658_kvde_timer_cnt <= seg0_end) {
         uint16_t seg_cnt = hg_image_1769146380658_kvde_timer_cnt - seg0_start;
         const uint16_t seg_cnt_max = seg0_end - seg0_start;
         
-            // 调整缩放: (1, 1) -> (1.3, 1.3)
+            // Adjust scale: (1, 1) -> (1.3, 1.3)
             const float zoom_x_origin = 1;
             const float zoom_x_target = 1.3;
             const float zoom_y_origin = 1;
@@ -80,7 +80,7 @@ void hg_image_1769146380658_kvde_timer_0_cb(void *obj)
     }
     
     if (hg_image_1769146380658_kvde_timer_cnt >= total_cnt_max) {
-        hg_image_1769146380658_kvde_timer_cnt = 0; // 重置计数器，继续循环
+        hg_image_1769146380658_kvde_timer_cnt = 0; // Reset counter, continue loop
     }
 }
 

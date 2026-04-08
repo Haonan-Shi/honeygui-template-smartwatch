@@ -39,7 +39,8 @@
       "compression": "rle"
     },
     "tab_bg": {
-      "compression": "rle"
+      "compression": "rle",
+      "format": "adaptive16"
     },
     "video": {
       "compression": "rle"
@@ -68,6 +69,10 @@
     "app_contacts": {
       "compression": "rle"
     },
+    "app_control_center": {
+      "compression": "rle",
+      "format": "ARGB8565"
+    },
     "app_home": {
       "compression": "rle"
     },
@@ -95,6 +100,50 @@
     "app_camera": {
       "compression": "rle",
       "format": "adaptive16"
+    },
+    "app_intercom": {
+      "compression": "rle"
+    },
+    "app_intercom/waveform/receiving": {
+      "format": "RGB565"
+    },
+    "app_intercom/waveform/transmitting": {
+      "format": "RGB565"
+    },
+    "app_intercom/waveform/idle": {
+      "format": "RGB565"
+    },
+    "app_music_player": {
+      "compression": "rle",
+      "format": "ARGB8565"
+    },
+    "app_music_player/list_btn.png": {
+      "format": "ARGB8565"
+    },
+    "app_music_player/volume_btn.png": {
+      "format": "ARGB8565"
+    },
+    "app_ota": {
+      "compression": "rle",
+      "format": "ARGB8565"
+    },
+    "app_recording/files_btn.png": {
+      "format": "ARGB8565"
+    },
+    "app_recording/back_icon.png": {
+      "format": "ARGB8565"
+    },
+    "app_recording/chevron_right.png": {
+      "format": "ARGB8565"
+    },
+    "app_recording/recording_bg.png": {
+      "format": "ARGB8888"
+    },
+    "app_control_center/bluetooth_icon.png": {
+      "format": "inherit"
+    },
+    "app_control_center/headphones_icon_connected.png": {
+      "format": "inherit"
     }
   }
 }
