@@ -205,17 +205,7 @@ static void recording_files_refresh_timer_cb(void *obj)
 
 static void schedule_recording_files_view_refresh(void)
 {
-	if (!recording_files_bg)
-	{
-		return;
-	}
-
-	files_view_refresh_retries = FILES_VIEW_REFRESH_RETRY_COUNT;
-	gui_obj_create_timer((gui_obj_t *)recording_files_bg,
-					 FILES_VIEW_REFRESH_INTERVAL_MS,
-					 true,
-					 recording_files_refresh_timer_cb);
-	gui_obj_start_timer((gui_obj_t *)recording_files_bg);
+	
 }
 
 static void update_recording_timer_display(void)
