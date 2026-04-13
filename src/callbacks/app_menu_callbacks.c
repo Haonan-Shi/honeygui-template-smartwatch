@@ -319,6 +319,13 @@ void app_menu_list_item_video_call_switch_view_cb(void *obj, gui_event_t *e)
     gui_view_switch_direct(gui_view_get_current(), "app_video_callIdleView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
 }
 
+void app_menu_list_item_wifi_test_switch_view_cb(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+    gui_view_switch_direct(gui_view_get_current(), "app_wifi_testWifiHomeView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+}
+
 void hg_image_1773813146142_x7xd_clicked_cb(void *obj, gui_event_t *e)
 {
     GUI_UNUSED(obj);
