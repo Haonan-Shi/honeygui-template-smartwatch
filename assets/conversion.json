@@ -507,10 +507,17 @@
       "app_video_call/ring_pulse/frame_26.png",
       "app_video_call/ring_pulse/frame_27.png",
       "app_video_call/ring_pulse/frame_28.png",
-      "app_video_call/ring_pulse/frame_29.png"
+      "app_video_call/ring_pulse/frame_29.png",
+      "app_wifi_test/**"
     ],
-    "videos": [],
-    "models": [],
-    "fonts": []
+    "videos": [
+      "app_wifi_test/**"
+    ],
+    "models": [
+      "app_wifi_test/**"
+    ],
+    "fonts": [
+      "app_wifi_test/**"
+    ]
   }
 }
