@@ -2,14 +2,32 @@
 #include "../ui/app_video_call_ui.h"
 #include "gui_img.h"
 #include "gui_view.h"
+#include "gui_message.h"
 
 #include <stdio.h>
+#include <string.h>
+
+// WiFi Camera feature flag
+#ifndef CONFIG_WIFI_CAMERA
+#define CONFIG_WIFI_CAMERA 0
+#endif
+
+#if CONFIG_WIFI_CAMERA
+#include "rtsp/wifi_rtsp_app.h"
+#endif
 
 #define RING_PULSE_FRAME_COUNT 30
 
+// State variables
 static bool mic_muted = false;
 static bool speaker_muted = false;
 static int ring_pulse_frame_index = 0;
+
+// Video call state
+#if CONFIG_WIFI_CAMERA
+static bool video_call_active = false;
+static bool video_streaming = false;
+#endif
 
 extern bool mic_btn_get_state(void) __attribute__((weak));
 extern void mic_btn_set_state(bool state) __attribute__((weak));
@@ -56,7 +74,8 @@ static void update_ring_pulse_frame(void)
         return;
     }
 
-    snprintf(frame_path, sizeof(frame_path), "/app_video_call/ring_pulse/frame_%02d.bin", ring_pulse_frame_index);
+    snprintf(frame_path, sizeof(frame_path), "/app_video_call/ring_pulse/frame_%02d.bin",
+             ring_pulse_frame_index);
     gui_img_set_src((gui_img_t *)video_call_ring_pulse_img, frame_path, IMG_SRC_FILESYS);
 }
 
@@ -121,6 +140,133 @@ void hangup_reset(void *obj, gui_event_t *e)
     ring_pulse_frame_index = 0;
     sync_call_button_images();
     update_ring_pulse_frame();
+
+#if CONFIG_WIFI_CAMERA
+    // Stop WiFi camera if active
+    if (video_call_active)
+    {
+        video_call_end(obj, e);
+    }
+#endif
+
     gui_fb_change();
-    gui_view_switch_direct(gui_view_get_current(), "app_video_callIdleView", SWITCH_OUT_ANIMATION_FADE, SWITCH_IN_ANIMATION_FADE);
+    gui_view_switch_direct(gui_view_get_current(), "app_video_callIdleView", SWITCH_OUT_ANIMATION_FADE,
+                           SWITCH_IN_ANIMATION_FADE);
+}
+
+/**
+ * video_call_start: Start video call by enabling WiFi camera
+ * Called when user initiates a video call
+ */
+void video_call_start(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+
+#if CONFIG_WIFI_CAMERA
+    // Prevent re-entry
+    if (video_call_active)
+    {
+        return;
+    }
+
+    video_call_active = true;
+    video_streaming = false;
+
+    // Update status text
+    if (video_call_calling_status)
+    {
+        gui_text_content_set((gui_text_t *)video_call_calling_status, "Connecting...", 11);
+    }
+
+    // Stop ring pulse animation timer
+    if (video_call_ring_pulse_img)
+    {
+        gui_obj_stop_timer((gui_obj_t *)video_call_ring_pulse_img);
+    }
+
+    // Start WiFi camera
+    // type=0: enter camera mode, data=NULL (use default IP)
+    wifi_camera_enter_proc(NULL);
+
+    gui_fb_change();
+#else
+    // If WiFi camera not enabled, just show connected status
+    if (video_call_calling_status)
+    {
+        gui_text_content_set((gui_text_t *)video_call_calling_status, "Connected", 9);
+    }
+    gui_fb_change();
+#endif
+}
+
+/**
+ * video_call_end: Stop video call by disabling WiFi camera
+ * Called when user ends the call
+ */
+void video_call_end(void *obj, gui_event_t *e)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(e);
+
+#if CONFIG_WIFI_CAMERA
+    if (!video_call_active)
+    {
+        return;
+    }
+
+    // Exit WiFi camera
+    wifi_camera_exit_proc(NULL);
+
+    video_call_active = false;
+    video_streaming = false;
+
+    // Restore avatar image
+    if (video_call_calling_avatar)
+    {
+        gui_img_set_src((gui_img_t *)video_call_calling_avatar, "/app_video_call/avatar_default.bin",
+                        IMG_SRC_FILESYS);
+    }
+
+    // Restart ring pulse animation timer
+    if (video_call_ring_pulse_img)
+    {
+        gui_obj_start_timer((gui_obj_t *)video_call_ring_pulse_img);
+    }
+#endif
+}
+
+/**
+ * video_call_update_stream: Handle video stream update from WiFi camera
+ * Called when "video_update" message is received
+ * Replaces avatar image with video stream
+ */
+void video_call_update_stream(gui_obj_t *obj, const char *topic, void *data, uint16_t len)
+{
+    GUI_UNUSED(obj);
+    GUI_UNUSED(topic);
+    GUI_UNUSED(data);
+    GUI_UNUSED(len);
+
+#if CONFIG_WIFI_CAMERA
+    if (!video_call_active)
+    {
+        return;
+    }
+
+    // Update status to show streaming
+    if (!video_streaming)
+    {
+        video_streaming = true;
+        if (video_call_calling_status)
+        {
+            gui_text_content_set((gui_text_t *)video_call_calling_status, "Streaming...", 11);
+        }
+    }
+
+    // TODO: Replace avatar with video frame
+    // The data contains MJPEG frame, need to decode and display
+    // This requires integration with the display driver
+    // Example: gui_img_set_jpeg((gui_img_t *)video_call_calling_avatar, data, len);
+#endif
 }
