@@ -32,6 +32,14 @@ void remove_paired_device_confirm(void *obj, gui_event_t *e);
 void remove_paired_device_cancel(void *obj, gui_event_t *e);
 void headphone1_connect(void *obj, gui_event_t *e);
 void headphone2_connect(void *obj, gui_event_t *e);
+void update_phone_list(gui_obj_t *obj, const char *topic, void *data, uint16_t len);
+void update_headphone_list(gui_obj_t *obj, const char *topic, void *data, uint16_t len);
+void update_search_list(gui_obj_t *obj, const char *topic, void *data, uint16_t len);
+void bt_phone_list_note_design(gui_obj_t *obj, void *param);
+void bt_headphone_list_note_design(gui_obj_t *obj, void *param);
+void bt_search_list_note_design(gui_obj_t *obj, void *param);
+void setting_list_note_design(gui_obj_t *obj, void *param);
+
 #ifdef __cplusplus
 }
 #endif
